@@ -1,11 +1,9 @@
-
-
 a=[]
 if __name__ == '__main__':
     for _ in range(int(input())):
         name = input()
-        score = round(float(input()),2)
-        a.append([name,round(score,2)])
+        score = float(input())
+        a.append([name,score])
         a.sort(key= lambda x:x[1],reverse=True)
 b=min([sublist[1] for sublist in a])
 c=[sublist[:] for sublist in a if sublist[1]==b]
